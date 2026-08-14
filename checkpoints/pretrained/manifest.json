@@ -1,0 +1,58 @@
+{
+  "format": "streamtalk-retrained-cfg-v1",
+  "architecture": "DiffusionDITNetPartsFixedExpressions2PostNormInteraction2",
+  "parameter_count": 71167501,
+  "state_dict": {
+    "tensor_count": 407,
+    "tensor_dtype": "torch.float32",
+    "device": "cpu"
+  },
+  "training": {
+    "dataset": "BEAT2 English",
+    "world_size": 4,
+    "global_batch_size": 512,
+    "cfg_dropout": 0.1,
+    "training_code_commit": "b6cac99d5bae5164a21f5db25afef72c3c30556a"
+  },
+  "evaluation": {
+    "cfg_scale": 3.0,
+    "speaker2_clip_count": 15,
+    "all_clip_count": 265,
+    "metric": "EMAGE/PantoMatrix AESK FGD",
+    "combined_score_formula": "max(speaker2_fgd / 0.383, all_fgd / 0.293)",
+    "protocol": "accelerated H200 evaluation; the final CFG=3 values have not been accepted against a direct paper-exact B=1/M=1/full-window oracle",
+    "reporting_tolerance": "1e-3 absolute FGD (user-selected engineering tolerance; not a completed oracle validation)",
+    "published_inference_data_rescore": {
+      "metric_batch_size": 16,
+      "speaker2_fgd": 0.3788789702354345,
+      "speaker2_selection_absolute_difference": 7.105427357601002e-15,
+      "all_fgd": 0.21764184426140076,
+      "all_selection_absolute_difference": 0.00002966349321199
+    },
+    "seed": 0
+  },
+  "artifacts": [
+    {
+      "file": "streamtalk_speaker2_combined_e0946_cfg3.pt",
+      "roles": ["speaker2", "combined"],
+      "completed_epoch": 946,
+      "cfg_scale": 3.0,
+      "speaker2_fgd": 0.3788789702354416,
+      "all_fgd": 0.2502867250611853,
+      "combined_score": 0.9892401311630329,
+      "size_bytes": 284796631,
+      "sha256": "07065d52e333cc48960e4e8fad5c0331f6b9e482f14aa1b78cb721904da5b075"
+    },
+    {
+      "file": "streamtalk_speaker_all_e0940_cfg3.pt",
+      "roles": ["speaker_all"],
+      "completed_epoch": 940,
+      "cfg_scale": 3.0,
+      "speaker2_fgd": 0.4244774977704626,
+      "all_fgd": 0.21767150775461275,
+      "combined_score": 1.108296338826273,
+      "size_bytes": 284796631,
+      "sha256": "3a0e3558d788fd3f11a5a87a8198b42725104b5b9b24f95a4e7c84c14395c9a5"
+    }
+  ]
+}

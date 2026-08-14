@@ -1,0 +1,4 @@
+# Official generator checkpoints are published as Hugging Face assets.
+checkpoints/pretrained/*.pt
+checkpoints/pretrained/*.pt.partial
+.DS_Store
