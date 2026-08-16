@@ -21,12 +21,17 @@
 
 <p align="center">
   <a href="https://arxiv.org/abs/2608.01643"><img src="https://img.shields.io/badge/arXiv-2608.01643-b31b1b.svg?logo=arxiv" alt="arXiv paper"></a>
+  <a href="https://huggingface.co/papers/2608.01643"><img src="https://img.shields.io/badge/Hugging_Face-Paper-yellow.svg" alt="Hugging Face paper"></a>
   <a href="https://xiangyuezhang.com/StreamTalk/"><img src="https://img.shields.io/badge/Project-Page-8a2be2.svg" alt="Project page"></a>
+  <a href="https://huggingface.co/X-Zhang/StreamTalk"><img src="https://img.shields.io/badge/%F0%9F%A4%97-Model_Weights-yellow.svg" alt="Hugging Face model weights"></a>
+  <a href="https://huggingface.co/datasets/X-Zhang/StreamTalk-Inference-Data"><img src="https://img.shields.io/badge/%F0%9F%A4%97-Inference_Data-yellow.svg" alt="Hugging Face inference data"></a>
   <a href="https://youtu.be/tKV3lWD6MDI"><img src="https://img.shields.io/badge/Video-Demo-ff0000.svg?logo=youtube&logoColor=white" alt="Video demo"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-2ea44f.svg" alt="MIT license"></a>
 </p>
 
 <p align="center"><strong>Closed-loop, real-time co-speech gesture generation that remains stable over long horizons.</strong></p>
+
+<p align="center"><sub>Keywords: streaming co-speech gesture generation, real-time speech-driven motion generation, long-horizon generation, BEAT2, and SMPL-X.</sub></p>
 
 <p align="center">
   <img src="resources/teaser.png" alt="StreamTalk contrasts open-loop drift with closed-loop streaming generation" width="100%">

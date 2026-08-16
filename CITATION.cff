@@ -1,0 +1,43 @@
+cff-version: 1.2.0
+message: "If you use StreamTalk, please cite the ECCV 2026 paper."
+title: "StreamTalk: Official Implementation"
+type: software
+authors:
+  - family-names: Zhang
+    given-names: Xiangyue
+  - family-names: Li
+    given-names: Jianfang
+  - family-names: Zhang
+    given-names: Jiaxu
+  - family-names: Yang
+    given-names: Kaixing
+  - family-names: Hoi
+    given-names: Steven
+repository-code: "https://github.com/Xiangyue-Zhang/StreamTalk"
+url: "https://xiangyuezhang.com/StreamTalk/"
+license: MIT
+abstract: "Official code and checkpoints for real-time streaming co-speech gesture generation with key-pose anchoring."
+keywords:
+  - streaming co-speech gesture generation
+  - co-speech motion generation
+  - real-time speech-driven motion generation
+  - long-horizon generation
+  - BEAT2
+  - SMPL-X
+preferred-citation:
+  type: conference-paper
+  title: "StreamTalk: Streaming Co-Speech Gesture Generation with Key-Pose Anchoring"
+  authors:
+    - family-names: Zhang
+      given-names: Xiangyue
+    - family-names: Li
+      given-names: Jianfang
+    - family-names: Zhang
+      given-names: Jiaxu
+    - family-names: Yang
+      given-names: Kaixing
+    - family-names: Hoi
+      given-names: Steven
+  collection-title: "European Conference on Computer Vision"
+  year: 2026
+  url: "https://arxiv.org/abs/2608.01643"
