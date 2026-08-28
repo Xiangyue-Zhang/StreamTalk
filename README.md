@@ -15,7 +15,6 @@
   <sup>4</sup>Renmin University
 </p>
 
-<p align="center"><sup>*</sup> Equal contribution</p>
 
 <h3 align="center">✨ ECCV 2026 ✨</h3>
 
