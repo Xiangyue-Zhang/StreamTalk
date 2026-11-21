@@ -20,7 +20,6 @@
 
 <p align="center">
   <a href="https://arxiv.org/abs/2608.01643"><img src="https://img.shields.io/badge/arXiv-2608.01643-b31b1b.svg?logo=arxiv" alt="arXiv paper"></a>
-  <a href="https://huggingface.co/papers/2608.01643"><img src="https://img.shields.io/badge/Hugging_Face-Paper-yellow.svg" alt="Hugging Face paper"></a>
   <a href="https://xiangyuezhang.com/StreamTalk/"><img src="https://img.shields.io/badge/Project-Page-8a2be2.svg" alt="Project page"></a>
   <a href="https://huggingface.co/X-Zhang/StreamTalk"><img src="https://img.shields.io/badge/%F0%9F%A4%97-Model_Weights-yellow.svg" alt="Hugging Face model weights"></a>
   <a href="https://huggingface.co/datasets/X-Zhang/StreamTalk-Inference-Data"><img src="https://img.shields.io/badge/%F0%9F%A4%97-Inference_Data-yellow.svg" alt="Hugging Face inference data"></a>
@@ -330,7 +329,7 @@ StreamTalk builds on resources from [BEAT2](https://huggingface.co/datasets/H-Li
 
 ## 📖 Citation
 
-The [ECCV proceedings and publisher citation](https://doi.org/10.1007/978-3-032-37595-7_32) and the [author preprint](https://arxiv.org/abs/2608.01643) are available.
+The paper is available on [arXiv (2608.01643)](https://arxiv.org/abs/2608.01643).
 
 ```bibtex
 @inproceedings{zhang2026streamtalk,
