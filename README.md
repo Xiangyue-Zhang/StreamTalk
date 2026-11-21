@@ -44,14 +44,14 @@
 
 ## 💖 Inference Data
 
-To compare against StreamTalk without reproducing the full WavLM, retrieval, and SMPL-X generation pipeline, download our generated BEAT2 test outputs directly. This follows the convenient inference-data release style used by [SemTalk](https://github.com/Xiangyue-Zhang/SemTalk).
+Compare StreamTalk on BEAT2 without rerunning generation. Each download includes predictions and matched ground-truth motion at 30 fps.
 
-| Evaluation split | Download |
-| :-- | :-- |
-| Speaker 2 (Scott) | [Download generated `.npz` files](https://huggingface.co/datasets/X-Zhang/StreamTalk-Inference-Data/resolve/main/streamtalk_speaker2_e0946_cfg3_npz.tar.gz) |
-| All speakers | [Download generated `.npz` files](https://huggingface.co/datasets/X-Zhang/StreamTalk-Inference-Data/resolve/main/streamtalk_all_e0940_cfg3_npz.tar.gz) |
+| BEAT2 protocol | Prediction / GT pairs | Download |
+| --- | ---: | --- |
+| Speaker 2 (Scott) | 15 | [Predictions and ground truth](https://huggingface.co/datasets/X-Zhang/StreamTalk-Inference-Data/resolve/main/StreamTalk_speaker2_predictions_and_gt.zip) |
+| 25 English speakers | 265 | [Predictions and ground truth](https://huggingface.co/datasets/X-Zhang/StreamTalk-Inference-Data/resolve/main/StreamTalk_25speakers_predictions_and_gt.zip) |
 
-The files are generated SMPL-X sequences named `res_<BEAT2-test-id>.npz`. Each file contains `poses`, `trans`, `expressions`, `betas`, `gender`, `mocap_frame_rate`, and `model`. They are predictions for metric comparison and visualization, not ground-truth data. The [dataset repository](https://huggingface.co/datasets/X-Zhang/StreamTalk-Inference-Data) contains the archive manifests and checksums.
+The ZIPs contain `predictions/res_<id>.npz`, `ground_truth/<id>.npz` and `pairs.csv` with lengths and hashes. In each case the predictions are byte-identical to the released CFG 3 outputs. For Speaker 2 use `python tools/evaluate_generated_fgd.py --predictions predictions --ground_truth ground_truth --scope speaker2 --metric_batch_size 16` from a checkout with those directories. Use `--scope all` for the 25-speaker ZIP. The [prediction-only archives and re-scores](https://huggingface.co/datasets/X-Zhang/StreamTalk-Inference-Data) remain available.
 
 ## 🧠 Pretrained Models
 
@@ -330,7 +330,7 @@ StreamTalk builds on resources from [BEAT2](https://huggingface.co/datasets/H-Li
 
 ## 📖 Citation
 
-If you find StreamTalk useful, please consider citing:
+The [ECCV proceedings and publisher citation](https://doi.org/10.1007/978-3-032-37595-7_32) and the [author preprint](https://arxiv.org/abs/2608.01643) are available.
 
 ```bibtex
 @inproceedings{zhang2026streamtalk,
@@ -344,6 +344,10 @@ If you find StreamTalk useful, please consider citing:
   url={https://arxiv.org/abs/2608.01643}
 }
 ```
+
+## Positioning and Related Work
+
+StreamTalk studies online co-speech gesture generation. It retrieves a speaker-specific key pose to guide each new motion window, which makes it a baseline for streaming continuity and long-sequence drift. [SemTalk](https://xiangyuezhang.com/SemTalk/) studies frame-level semantic emphasis, and [GlobalDiff](https://xiangyuezhang.com/GlobalDiff/) studies spatial error propagation along the skeleton. For quantitative comparisons, the [paired BEAT2 downloads](#-inference-data) preserve the released predictions and the corresponding reference motion.
 
 ## 📄 License
 
